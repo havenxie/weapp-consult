@@ -1,0 +1,397 @@
+/* pages/order/order.wxss *//* pages/setting/setting.wxss */
+.pages {
+  background-color: #fff;
+  padding-top: 0;
+  padding-bottom: 0;
+  justify-content: flex-start;
+  /* overflow-y: hidden; */
+}
+.doctorInfo
+{
+  display: flex;
+  flex-direction: row;
+  justify-items: left;
+  width: 100%;
+}
+.doctorInfo .doctorImg {
+  width: 75%;
+  height: 360rpx;
+  display: block;
+  margin-right: 16rpx;
+  border-radius: 12rpx;
+}
+.doctorInfo .infoDetail {
+  display: flex;  
+  flex-direction: column;
+  justify-content: space-around;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(233, 127, 5);
+}
+.doctorInfo .infoDetail .name {
+}
+.doctorInfo .infoDetail .id {
+}
+.doctorInfo .infoDetail .pb {
+}
+.resume {
+  margin: 10px 0;
+  font-size: 32rpx;
+  background-color: rgba(250, 127, 164, 0.5);
+  border-radius: 12rpx;
+  padding: 14rpx;
+  box-shadow: 3rpx 3rpx 5rpx #ccc;
+}
+
+.message {
+  width: 100%;
+  margin-top: 26rpx;  
+  height: 40%;
+}
+.message .msgArea {
+  width: 100%;
+  border: 1rpx solid #52b8f5;
+  border-radius: 12rpx;
+  padding: 8rpx;
+  font-size: 32rpx;
+  overflow-y: scroll;
+  height: 60%;
+  box-sizing: border-box;
+}
+.message .msgControl {
+  margin-top: 20rpx;
+}
+.message .msgControl button {
+  margin: 20rpx;
+  border-radius: 10rpx;
+  color: #fff;  
+}
+.message .msgControl .cancel {
+  background-color: rgb(233, 127, 5);
+}
+.message .msgControl .submit {
+  background-color: #52b8f5;
+}
+
+.customBtn {
+  width: 100%;
+  margin: 16rpx 0;
+  font-size: 36rpx;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  color: #fff;
+  background-color: #52b8f5;
+  border-radius: 12rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.showColor {
+  color: #333;
+  background-color: #dff1d5;
+}
+.customBtn .orderTips {
+  padding: 0;
+}
+.customBtn .orderLists
+{
+  height: 100%;
+  overflow-y: scroll;  
+}
+.customBtn .orderItem {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  margin-top: 12rpx;
+}
+.customBtn .orderItem .day {
+  display: block;
+  width: 68%;
+  height: 68rpx;
+  line-height: 68rpx;
+}
+.customBtn .orderItem .but {
+  width: 30%;
+  height: 68rpx;
+  line-height: 68rpx;
+  color: #fff;
+  background-color: #52b8f5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 月历区域开始 */
+.datearea {
+  width: 100%;
+  font-size: 26rpx;
+  padding-bottom: 2rpx;
+}
+.calendar-box {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.calendar-wrapper.active {
+  transform: translateY(0%);
+}
+.calendar-panel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  height: 80rpx;
+  border-bottom: 7rpx solid #f5f5f5;
+}
+.date-befor, .date-after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80rpx;
+  width: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+}
+.calendar-panel-box {
+  color: #52b8f5;
+  display: flex;
+}
+.iconfont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #52b8f5;
+  width: 53rpx;
+  height: 53rpx;
+}
+.iconfont .left, .iconfont .right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 20rpx solid transparent;
+  border-bottom: 20rpx solid transparent;
+}
+.iconfont .left {
+  border-right: 40rpx solid transparent;
+}
+.iconfont .right {
+  border-left: 40rpx solid transparent;
+}
+.iconfont .left.color {
+  /* border-right-color: #52b8f5; */
+  border-right-color: #ccc;
+}
+.iconfont .right.color {
+  /* border-left-color: #52b8f5; */
+  border-left-color: #ccc;
+}
+.calendar-header, .calendar-content {
+  display: flex;
+  text-align: center;
+  color: #333;
+  opacity: 0.9;
+}
+.calendar-header view:first-child, .calendar-content view:first-child {
+  border-left: none;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  width: 50rpx;
+  writing-mode: vertical-rl;
+  vertical-align: middle;
+  text-align: center;
+  color: #52b8f5;
+}
+.calendar-header view:not(:first-child), .calendar-content view:not(:first-child) {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  /* color: #52b8f5; */
+  border-left: 1rpx solid #f5f5f5;
+  border-top: 1rpx solid #f5f5f5;
+  font-size: 30rpx;
+  border-radius: 6rpx;
+}
+.calendar-header view.head {
+  height: 70rpx;
+  line-height: 70rpx;
+  color: #52b8f5;
+}
+.calendar-content view:not(:first-child):active{
+  color: #ccc;
+  opacity: 0.5;
+}
+.calendar-content .disedit {
+  color: #333;
+  background-color: #ccc;
+  opacity: 0.9;
+}
+.calendar-content .hasedit {
+  color: #fff;
+  background-color: #52b8f5;
+  opacity: 0.9;
+}
+.calendar-content .noedit {
+  color: #fff;
+  background-color: rgb(233, 127, 5); 
+  opacity: 0.9;
+}
+.calendar-content .selected {
+  color: #333;
+  background-color: #58e44c;
+  opacity: 0.9;
+  box-shadow:8rpx 6rpx 6rpx #333;
+}
+
+/* 月历区域结束 */
+
+.calendar-footer{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-size: 24rpx;
+  padding-left: 50rpx;
+  color: #333;
+  opacity: 0.9;
+}
+.calendar-footer .signs {
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  flex-direction: row;
+}
+.calendar-footer .signs view {
+  position: relative;
+  margin:0 20rpx;
+}
+.calendar-footer .signs view::before {
+  content: "";
+  position: absolute;
+  top: 20rpx;
+  left: -20rpx;
+  border: 8rpx solid #ccc;
+  border-radius: 8rpx;
+  box-sizing: border-box;
+}
+.calendar-footer .signs view:first-child::before {
+  border-color: #ccc;
+}
+.calendar-footer .signs view:nth-child(2)::before {
+ border-color: #52b8f5;
+}
+.calendar-footer .signs view:nth-child(3)::before {
+ border-color: rgb(233, 127, 5); 
+}
+.calendar-footer .signs view:last-child::before {
+  border-color: #58e44c;
+}
+.calendar-footer .info {
+  flex: 1;  
+  text-align: left;
+  height: 50rpx;
+  line-height: 50rpx;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+/* 特殊按键区域开始 */
+.btnarea {
+  width: 100%;
+  border-top: 8rpx solid #f5f5f5;
+  border-bottom: 8rpx solid #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+.btnarea text {
+  font-size:24rpx;
+  opacity:0.6;
+}
+.btnbox {
+  width: 92%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.littlebtn {
+  width: 46%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #52b8f5;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 34rpx;
+}
+.line{
+  width: 70%;
+  height: 0;
+  border-top: 3rpx solid #52b8f5;
+  margin: 30rpx 0;
+  box-shadow: 3rpx 3rpx 5rpx #ccc;
+}
+.bigbtn{
+  width: 92%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  color: #fff;
+  background-color: #52b8f5;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  font-size: 34rpx;
+}
+/* button:active{
+  color: #ccc;
+  opacity: 0.5;
+}
+picker:active{
+  color: #ccc;
+  opacity: 0.5;
+}
+button[disabled]:not([type]) {
+  color:rgba(0, 0, 0, 0.5);
+  background-color:#ccc;
+  font-size: 18px;
+}
+picker[disabled]:not([type]) {
+  color:rgba(0, 0, 0, 0.5);
+  background-color:#ccc;
+  font-size: 18px;
+} */
+/* 特殊按键区域结束 */
+.txtarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  opacity: 0.9;
+}
+
+.txtinfo {
+  line-height: 42rpx;
+}

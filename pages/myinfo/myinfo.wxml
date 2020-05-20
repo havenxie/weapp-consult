@@ -1,0 +1,35 @@
+<!--pages/myinfo/myinfo.wxml-->
+<view class="container">
+  <view class="infoBox" catchtap="catchTapModify">
+    <view class="avatar box" >
+      <text class="title">头像</text>
+      <image class="img" src="{{(!hasUserInfo)? '../../imgs/logo.png' : userInfo.avatarUrl}}" mode="cover"></image>
+      <!-- <image class="right" src="../../imgs/more.png" mode="cover"></image> -->
+    </view>
+    <view class="box">
+      <text class="title">姓名</text>
+      <text class="content">{{hasMyInfo ? myInfo.name : ''}}</text>
+    </view>
+    <view class="box">
+      <text class="title">年龄</text>
+      <text class="content">{{hasMyInfo ? myInfo.age : ''}}</text>
+    </view>
+    <view class="box">
+      <text class="title">性别</text>
+      <text class="content">{{hasMyInfo ? myInfo.sex : ''}}</text>
+    </view>
+    <view class="box">
+      <text class="title">手机号</text>
+      <text class="content">{{hasMyInfo ? myInfo.phone : ''}}</text>
+    </view>
+    <view class="box">
+      <text class="title">出生日期</text>
+      <text class="content">{{hasMyInfo ? myInfo.birthday : ''}}</text>
+    </view>
+    <view class="box">
+      <text class="title">地址</text>
+      <text class="content">{{hasMyInfo ? myInfo.address : ''}}</text>
+    </view>
+  </view>
+  <button class="modifyBtn" catchtap="catchTapModify">修改</button>
+</view>

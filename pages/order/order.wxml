@@ -1,0 +1,61 @@
+<view class="pages">
+ 
+  <view class="doctorInfo">
+    <image class="doctorImg" mode="aspectFill" lazy-load="{{true}}" src="{{thisDoctorInfo.headimg}}"></image>
+    <view class="infoDetail">
+      <text>{{thisDoctorInfo.name}}</text>
+      <text>ID.{{thisDoctorInfo.drid}}</text>
+      <text>排班: {{thisDoctorInfo.weekday}}</text>
+    </view>
+  </view>
+ 
+  <!-- 专家简介开始 -->
+  <view class="resume" hidden="{{!showMark.resume}}" data-mark="resume">
+    <text>简介：{{thisDoctorInfo.intro}}</text>
+  </view>
+  <!-- 专家简介结束 -->
+ 
+  <!-- 留言部分开始 -->
+  <view class="message" hidden="{{!showMark.textArea}}">
+    <form bindsubmit="bindFormSubmit">
+      <textarea class="msgArea" maxlength='-1' placeholder="请在此处留言" name="textarea" value="{{messages}}">
+      </textarea>
+      <view class="msgControl">
+        <button class="submit" form-type="submit" catchtap="" hidden="{{!showSubmit}}">提交</button>
+        <button class="cancel" catchtap="catchTapCancel">取消</button>
+      </view>
+    </form>
+  </view>
+  <!-- 留言部分结束 -->
+
+  <!-- 向专家留言按钮开始 -->
+  <view class="customBtn" hidden="{{!showMark.pushMsg}}" data-mark="pushMsg" catchtap="catchTapPushMsg">
+    <text class="orderTips">向专家在线留言</text>
+  </view>
+  <!-- 向专家留言按钮结束 -->
+
+  <!-- 查询我的留言按钮开始 -->
+  <view class="customBtn" hidden="{{!showMark.pullMsg}}" data-mark="pullMsg" catchtap="catchTapPullMsg">
+    <text class="orderTips">查询我的留言</text>
+  </view>
+  <!-- 查询我的留言按钮结束 -->
+
+  <!-- 预约日期列表部分开始 -->
+  <view class="customBtn {{(!dropBox)?'':'showColor'}}" hidden="{{!showMark.lists}}" data-mark="lists"  >
+    <picker class='' bindchange='bindSetOrder' value="{{index}}" range="{{thisDoctorInfo.scheduleLong}}" >查看并选择预约日期</picker>
+  </view>
+  
+  <!-- <view class="customBtn {{(!dropBox)?'':'showColor'}}" hidden="{{!showMark.lists}}" data-mark="lists"  >
+    <view class="orderTips" catchtap='catchTapLists'><text>{{(!dropBox)?'查看预约日期列表':'关闭预约日期列表'}}</text></view>
+    <view class="orderLists" hidden='{{!dropBox}}' >
+      <block wx:for="{{thisDoctorInfo.schedule}}" wx:key="order">
+        <view class="orderItem">
+          <text class="day">{{item}}</text>
+          <button class="but" bindtap="bindSetOrder" data-day="{{item}}">点击预约</button>
+        </view>
+      </block>
+    </view>
+  </view>  -->
+  <!-- 预约列表部分结束 -->
+ 
+</view>

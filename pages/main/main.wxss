@@ -1,0 +1,7 @@
+/* pages/main.wxss */
+.pages .test {
+  text-align: center;
+  color: rgba(233, 70, 5, 0.5);
+}
+
+

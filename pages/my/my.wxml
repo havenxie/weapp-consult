@@ -1,0 +1,44 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="userinfo" catchtap="{{hasUserInfo ? 'catchTapGotoInfo' : ''}}">
+    <image class="userinfo-avatar" src="{{(!hasUserInfo && canIUse)? '../../imgs/logo.png' : userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userinfo-nickname">{{(!hasUserInfo && canIUse) ? '点击登录并完善信息' : userInfo.nickName}}</text>
+    <button class="loadBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">  </button>
+    <image class="right" src="../../imgs/more.png" mode="cover"></image>
+  </view>
+
+  <view class="usermotto">
+    <image class="icon" src= '../../imgs/message.png' mode="cover"></image>
+    <text class="user-motto">我的留言</text>
+  </view>
+
+  <view class="usermotto" catchtap="">
+    <image class="icon" src= '../../imgs/appointment.png' mode="cover"></image>
+    <text class="user-motto">我的预约</text>
+  </view>
+
+  <view class="usermotto" catchtap="catchtapGotoLog">
+    <image class="icon" src= '../../imgs/other.png' mode="cover"></image>
+    <text class="user-motto">最近登录</text>
+  </view>
+
+  <view class="usermotto" catchtap="catchTapFeedback">
+    <image class="icon" src= '../../imgs/feedback.png' mode="cover"></image>
+    <text class="user-motto">意见反馈</text>
+  </view>
+
+  <!-- 自定义弹框开始 -->
+  <view wx:if="{{showModel}}" class="model">
+    <view class="modelTitle">
+      提示
+    </view>
+    <view class="modelBody">微信登录需要获取您的用户信息</view>
+    <view class="btns">
+      <button open-type="getUserInfo" class="agree" bindgetuserinfo="getUserInfo" lang="zh_CN">确定</button>
+    </view>
+  </view>
+  <view wx:if="{{showModel}}" class="mask"></view>
+    <!-- 自定义弹框结束 -->
+
+</view>

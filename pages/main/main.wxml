@@ -1,0 +1,8 @@
+<!--pages/main.wxml-->
+<view class="pages">
+  <text class="test">敬请期待</text>
+
+
+</view>
+
+

@@ -1,0 +1,209 @@
+接口文档：小程序：清远心理辅导
+
+2020年4月8日
+21:23
+
+ 1. 接口概要：
+
+1.1 接口格式
+ json，格式略，返回值通用包含两个值 code 与 desc。Code==200代表接口调用成功/结果正常。当code值!= 200时 desc 返回异常的具体说明。
+
+例如：
+{code:200, desc: "ok"}
+
+1.2 sign值
+部分接口需要额外传递一个校验用的 sign值用于校验请求传参，以下是sign值生成方式：
+把所有参数的value按key的顺序排列串接成字符串,在字符串头部添加一个约定的 salt 字符串，把得到的字符串做md5 hash
+$salt = "qsXLFD"
+举例(javascript):
+ var salt = "qxXLFD";  //静态变量
+ //参数
+ var a = "xxxx";
+ var c =  "yyyy";
+ var b= "zzzz";
+ //生成sign
+ sign = md5(salt+ a + b + c);
+ //请求
+ $.post("api/someapi.php",{
+  a: a,
+  b: b,
+  c: c,
+  sign: sign
+ },function(res){
+  if(res.code==200){
+   //todo 调用成功
+  }else{
+   //todo 异常
+   alert(res.desc);
+  }
+ },
+ "json"
+ );
+
+
+
+ 2. 接口列表：
+2.1 获取用户openid
+以小程序端的code值换领用户openid
+*建议在小程序端缓存此值
+
+https://qx.sj0763.com/2020/wxapp_xlfd/api/getopenid.php
+方法: POST
+参数:
+code 小程序获得的code
+sign 参考概述部分 *$sign=md5($salt.$code)
+
+返回：JSON
+正确时返回
+{"code":200,"desc":"ok", "openid":微信openid } 
+
+相关文档 https://developers.weixin.qq.com/miniprogram/dev/api/api-login.html
+
+
+2.2 查询专家
+获得专家列表、内容包括专家的姓名、简介、最近一个月的可预约日期
+接口
+https://qx.sj0763.com/2020/wxapp_xlfd/api/professorlist.php
+*模拟接口(可作废，正式接口已部署)
+https://qx.sj0763.com/2020/wxapp_xlfd/api/professorlist.demo.php
+
+参数：无
+返回：JSON
+正确时返回 
+ {
+     "code":200,
+     "desc":"ok",
+     "now":"2020-04-14 20:25:51",  //当前时间，无特殊用途
+     "now_timestamp":1586867151, //同上，秒为单位时间戳 
+     "professor":[ //专家的名单
+   {
+    "drid": 1, //专家ID,后续程序用 
+    "name":"张三主任", //专家姓名头衔
+    "headimg":"https://qx.sj0763.com/2020/wxapp_xlfd/images/dr/defaultface.jpg", //头像
+    "intro":"同济大学硕士，国家二级心理咨询师，…",  //简介
+    "weekday": "1,2,3,4,", //可预约接诊 星期，逗号分隔， 0 ~ 6 代表周日 至 周六
+    "schedule":[ //近30天可预约就诊日期，格式 YYYY-MM-DD
+            "2020-04-16", 
+     …
+             ]
+   }, 
+   …
+  ]
+ }
+
+
+2.3 向专家在线留言(新建会话 或 回复)
+部分参数含义结合 下文2.4查询留言接口理解
+接口
+https://qx.sj0763.com/2020/wxapp_xlfd/api/sentmsg.php
+
+参数 (方法：POST)
+openid : 
+drid: 专家id，向指定的专家留言，传空字符串或0时，不指定专家
+sessid: 会话id，对某个留言对话进行回复和补充，不传或值为空字符串或0时，创建新会话
+msg: 留言内容
+sign: 校验值，参考顶部生成说明
+
+返回：JSON
+正确时返回
+{
+ code:200, 
+ desc:"ok"，
+ lastestmsg：1586867151 //更新消息列表的时间戳，请在小程序本地缓存更新此值，用于判断是否有未读新消息。
+}
+
+
+2.4 查询我的留言
+一次返回与我有关的全部留言（*90天以前的忽略）；
+*未考虑“未读信息”具体标记到会话的实现
+其中返回值 “lastestmsg”为时间戳，建议小程序在本地缓存此值，下次请求该接口时比对两值，如有变化说明会话内容有更新（有新回复）
+
+接口
+https://qx.sj0763.com/2020/wxapp_xlfd/api/mymsgs.php
+
+参数 (方法：POST)
+openid : 
+sign: 校验值，参考顶部生成说明
+
+返回：JSON
+正确时返回
+ {
+  code: 200,
+  desc: "ok",
+  lastestmsg: 1586867151, //整个会话列表的更新时间戳，可用于判断内容是否有更新未读信息
+  sessions: [ //会话清单，按创建会话的时间顺序排列
+   {
+    sessid: 99, //会话id
+    update: "2020-04-14 20:25", //此会话的最后一条消息的更新时间
+    drid: 0, //创建会话时，用户指定的留言对象，不指定时值为0（此值与客户端UI不相关）
+    msgs: [ //留言内容，按时间顺序排列
+     {
+      time: 1586867151, //消息时间戳
+      date: "2020-04-14 20:25", //同上，格式化YYYY-MM-DD HH:mm
+      from: "me", // 用户自己的留言 值为'me'，来自专家的答复此值为专家姓名
+      direction：0， //0：用户向专家的留言，1：专家对用户的答复
+      content: "留言的内容",
+     
+     }，
+     …
+    ] 
+   },
+   …
+  ]
+  
+ }
+
+
+2.5 预约专家
+
+业务流程设计： 用户发起预约（选取期望的预约日期） -> 后台工作人员线下联系确认预约信息 -> 更新预约信息
+
+接口
+https://qx.sj0763.com/2020/wxapp_xlfd/api/appointment.php
+
+参数 (方法：POST)
+openid : 用户openid
+drid：专家ID
+date: 期望预约日期 
+name: 用户姓名
+phone: 用户联系电话
+sign: 校验值，参考顶部生成说明
+
+
+返回值json
+ {
+  code: 200,
+  desc: "ok",
+  apmid: 66 //预约号 ID , 客户端无需求
+ }
+
+2.6 查询我的预约
+
+接口
+https://qx.sj0763.com/2020/wxapp_xlfd/api/myappointments.php
+
+参数 (方法：POST)
+openid : 用户openid
+sign: 校验值，参考顶部生成说明
+
+返回值
+
+ {
+  code: 200,
+  desc: "ok",
+  appointments:[ //预约清单，按预约时间倒序排列
+   {
+    apmid: 66 //预约号ID
+    date: "2012年12月12日 下午2点-6点" //预约时间。是一个展示值，不一定是标准的日期格式
+    status: 1, //值分别为 0 待确认；1已预约；2已取消; 
+    drname："李四教授",  //预约的专家姓名
+    info: "请于预约当日前往 XXX路XX号XXX诊所前台登记 " //可选的额外的提醒信息，由后台工作人员追加录入
+   },
+   …
+  ]
+ }
+
+
+2.7 资讯列表
+返回相关的文章列表（日期、标题、微信文章的url）
+

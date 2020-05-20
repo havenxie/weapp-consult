@@ -1,0 +1,801 @@
+{
+    "citycode": "0763",
+    "adcode": "441800",
+    "name": "清远市",
+    "center": "113.051227,23.685022",
+    "level": "city",
+    "districts": [
+        "0": {
+            "citycode": "0763",
+            "adcode": "441882",
+            "name": "连州市",
+            "center": "112.379271,24.783966",
+            "level": "district",
+            "districts": [
+                "0": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "三水瑶族乡",
+                    "center": "112.329,25.1228",
+                    "level": "street",
+                    "districts": []
+                },
+                "1": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "九陂镇",
+                    "center": "112.43,24.7234",
+                    "level": "street",
+                    "districts": []
+                },
+                "2": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "西江镇",
+                    "center": "112.542,24.7453",
+                    "level": "street",
+                    "districts": []
+                },
+                "3": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "大路边镇",
+                    "center": "112.6,24.9929",
+                    "level": "street",
+                    "districts": []
+                },
+                "4": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "龙坪镇",
+                    "center": "112.497,24.9207",
+                    "level": "street",
+                    "districts": []
+                },
+                "5": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "保安镇",
+                    "center": "112.404,24.9693",
+                    "level": "street",
+                    "districts": []
+                },
+                "6": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "西岸镇",
+                    "center": "112.141,24.9397",
+                    "level": "street",
+                    "districts": []
+                },
+                "7": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "星子镇",
+                    "center": "112.457,25.0719",
+                    "level": "street",
+                    "districts": []
+                },
+                "8": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "瑶安瑶族乡",
+                    "center": "112.361,25.145",
+                    "level": "street",
+                    "districts": []
+                },
+                "9": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "丰阳镇",
+                    "center": "112.245,25.1021",
+                    "level": "street",
+                    "districts": []
+                },
+                "10": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "东陂镇",
+                    "center": "112.334,25.0812",
+                    "level": "street",
+                    "districts": []
+                },
+                "11": {
+                    "citycode": "0763",
+                    "adcode": "441882",
+                    "name": "连州镇",
+                    "center": "112.307,24.7193",
+                    "level": "street",
+                    "districts": []
+                }
+            ]
+        },
+        "1": {
+            "citycode": "0763",
+            "adcode": "441826",
+            "name": "连南瑶族自治县",
+            "center": "112.290808,24.719097",
+            "level": "district",
+            "districts": [
+                "0": {
+                    "citycode": "0763",
+                    "adcode": "441826",
+                    "name": "大坪镇",
+                    "center": "112.255,24.6584",
+                    "level": "street",
+                    "districts": []
+                },
+                "1": {
+                    "citycode": "0763",
+                    "adcode": "441826",
+                    "name": "三排镇",
+                    "center": "112.255,24.6414",
+                    "level": "street",
+                    "districts": []
+                },
+                "2": {
+                    "citycode": "0763",
+                    "adcode": "441826",
+                    "name": "涡水镇",
+                    "center": "112.253,24.6469",
+                    "level": "street",
+                    "districts": []
+                },
+                "3": {
+                    "citycode": "0763",
+                    "adcode": "441826",
+                    "name": "寨岗镇",
+                    "center": "112.323,24.531",
+                    "level": "street",
+                    "districts": []
+                },
+                "4": {
+                    "citycode": "0763",
+                    "adcode": "441826",
+                    "name": "香坪镇",
+                    "center": "112.116,24.4369",
+                    "level": "street",
+                    "districts": []
+                },
+                "5": {
+                    "citycode": "0763",
+                    "adcode": "441826",
+                    "name": "大麦山镇",
+                    "center": "112.318,24.5255",
+                    "level": "street",
+                    "districts": []
+                },
+                "6": {
+                    "citycode": "0763",
+                    "adcode": "441826",
+                    "name": "三江镇",
+                    "center": "112.167,24.8664",
+                    "level": "street",
+                    "districts": []
+                }
+            ]
+        },
+        "2": {
+            "citycode": "0763",
+            "adcode": "441825",
+            "name": "连山壮族瑶族自治县",
+            "center": "112.086555,24.567271",
+            "level": "district",
+            "districts": [
+                "0": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "永和镇",
+                    "center": "112.03,24.7438",
+                    "level": "street",
+                    "districts": []
+                },
+                "1": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "上帅镇",
+                    "center": "112,24.2805",
+                    "level": "street",
+                    "districts": []
+                },
+                "2": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "福堂镇",
+                    "center": "112.032,24.4252",
+                    "level": "street",
+                    "districts": []
+                },
+                "3": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "小三江镇",
+                    "center": "112.13,24.3451",
+                    "level": "street",
+                    "districts": []
+                },
+                "4": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "禾洞农林场",
+                    "center": "112.116,24.7967",
+                    "level": "street",
+                    "districts": []
+                },
+                "5": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "太保镇",
+                    "center": "112.135,24.7317",
+                    "level": "street",
+                    "districts": []
+                },
+                "6": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "吉田镇",
+                    "center": "111.972,24.6283",
+                    "level": "street",
+                    "districts": []
+                },
+                "7": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "禾洞镇",
+                    "center": "112.105,24.7215",
+                    "level": "street",
+                    "districts": []
+                },
+                "8": {
+                    "citycode": "0763",
+                    "adcode": "441825",
+                    "name": "连山林场",
+                    "center": "112.116,24.5509",
+                    "level": "street",
+                    "districts": []
+                }
+            ]
+        },
+        "3": {
+            "citycode": "0763",
+            "adcode": "441821",
+            "name": "佛冈县",
+            "center": "113.534094,23.866739",
+            "level": "district",
+            "districts": [
+                "0": {
+                    "citycode": "0763",
+                    "adcode": "441821",
+                    "name": "高岗镇",
+                    "center": "113.533,24.0488",
+                    "level": "street",
+                    "districts": []
+                },
+                "1": {
+                    "citycode": "0763",
+                    "adcode": "441821",
+                    "name": "石角镇",
+                    "center": "113.511,23.9517",
+                    "level": "street",
+                    "districts": []
+                },
+                "2": {
+                    "citycode": "0763",
+                    "adcode": "441821",
+                    "name": "迳头镇",
+                    "center": "113.635,23.9516",
+                    "level": "street",
+                    "districts": []
+                },
+                "3": {
+                    "citycode": "0763",
+                    "adcode": "441821",
+                    "name": "水头镇",
+                    "center": "113.623,23.889",
+                    "level": "street",
+                    "districts": []
+                },
+                "4": {
+                    "citycode": "0763",
+                    "adcode": "441821",
+                    "name": "汤塘镇",
+                    "center": "113.447,23.8092",
+                    "level": "street",
+                    "districts": []
+                },
+                "5": {
+                    "citycode": "0763",
+                    "adcode": "441821",
+                    "name": "龙山镇",
+                    "center": "113.445,23.8081",
+                    "level": "street",
+                    "districts": []
+                }
+            ]
+        },
+        "4": {
+            "citycode": "0763",
+            "adcode": "441881",
+            "name": "英德市",
+            "center": "113.405404,24.18612",
+            "level": "district",
+            "districts": [
+                "0": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "石牯塘镇",
+                    "center": "113.208,24.4787",
+                    "level": "street",
+                    "districts": []
+                },
+                "1": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "英红镇",
+                    "center": "113.199,24.2601",
+                    "level": "street",
+                    "districts": []
+                },
+                "2": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "沙口镇",
+                    "center": "113.545,24.5087",
+                    "level": "street",
+                    "districts": []
+                },
+                "3": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "波罗镇",
+                    "center": "112.978,24.5481",
+                    "level": "street",
+                    "districts": []
+                },
+                "4": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "白沙镇",
+                    "center": "113.733,24.0733",
+                    "level": "street",
+                    "districts": []
+                },
+                "5": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "横石塘镇",
+                    "center": "113.324,24.4398",
+                    "level": "street",
+                    "districts": []
+                },
+                "6": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "石灰铺镇",
+                    "center": "113.308,24.3105",
+                    "level": "street",
+                    "districts": []
+                },
+                "7": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "望埠镇",
+                    "center": "113.544,24.3729",
+                    "level": "street",
+                    "districts": []
+                },
+                "8": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "水边镇",
+                    "center": "113.17,23.9849",
+                    "level": "street",
+                    "districts": []
+                },
+                "9": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "桥头镇",
+                    "center": "113.848,24.3099",
+                    "level": "street",
+                    "districts": []
+                },
+                "10": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "黄花镇",
+                    "center": "112.788,24.2911",
+                    "level": "street",
+                    "districts": []
+                },
+                "11": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "黎溪镇",
+                    "center": "113.23,23.9885",
+                    "level": "street",
+                    "districts": []
+                },
+                "12": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "西牛镇",
+                    "center": "113.017,24.0669",
+                    "level": "street",
+                    "districts": []
+                },
+                "13": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "下太镇",
+                    "center": "113.425,24.0564",
+                    "level": "street",
+                    "districts": []
+                },
+                "14": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "大湾镇",
+                    "center": "112.867,24.4321",
+                    "level": "street",
+                    "districts": []
+                },
+                "15": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "东华镇",
+                    "center": "113.681,24.435",
+                    "level": "street",
+                    "districts": []
+                },
+                "16": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "含光镇",
+                    "center": "113.167,24.2861",
+                    "level": "street",
+                    "districts": []
+                },
+                "17": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "大站镇",
+                    "center": "113.545,24.2046",
+                    "level": "street",
+                    "districts": []
+                },
+                "18": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "横石水镇",
+                    "center": "113.776,24.4132",
+                    "level": "street",
+                    "districts": []
+                },
+                "19": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "九龙镇",
+                    "center": "112.894,24.1027",
+                    "level": "street",
+                    "districts": []
+                },
+                "20": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "青塘镇",
+                    "center": "113.874,24.2409",
+                    "level": "street",
+                    "districts": []
+                },
+                "21": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "英城街道",
+                    "center": "113.315,24.1804",
+                    "level": "street",
+                    "districts": []
+                },
+                "22": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "大洞镇",
+                    "center": "112.993,24.011",
+                    "level": "street",
+                    "districts": []
+                },
+                "23": {
+                    "citycode": "0763",
+                    "adcode": "441881",
+                    "name": "连江口镇",
+                    "center": "113.234,24.1781",
+                    "level": "street",
+                    "districts": []
+                }
+            ]
+        },
+        "5": {
+            "citycode": "0763",
+            "adcode": "441823",
+            "name": "阳山县",
+            "center": "112.634019,24.470286",
+            "level": "district",
+            "districts": [
+                "0": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "阳城镇",
+                    "center": "112.54,24.5158",
+                    "level": "street",
+                    "districts": []
+                },
+                "1": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "太平镇",
+                    "center": "112.572,24.274",
+                    "level": "street",
+                    "districts": []
+                },
+                "2": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "小江镇",
+                    "center": "112.556,24.662",
+                    "level": "street",
+                    "districts": []
+                },
+                "3": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "七拱镇",
+                    "center": "112.563,24.4136",
+                    "level": "street",
+                    "districts": []
+                },
+                "4": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "黄坌镇",
+                    "center": "112.649,24.6743",
+                    "level": "street",
+                    "districts": []
+                },
+                "5": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "江英镇",
+                    "center": "112.899,24.6367",
+                    "level": "street",
+                    "districts": []
+                },
+                "6": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "岭背镇",
+                    "center": "112.809,24.6537",
+                    "level": "street",
+                    "districts": []
+                },
+                "7": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "青莲镇",
+                    "center": "112.678,24.5222",
+                    "level": "street",
+                    "districts": []
+                },
+                "8": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "杨梅镇",
+                    "center": "112.552,24.1473",
+                    "level": "street",
+                    "districts": []
+                },
+                "9": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "黎埠镇",
+                    "center": "112.409,24.6224",
+                    "level": "street",
+                    "districts": []
+                },
+                "10": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "杜步镇",
+                    "center": "112.631,24.3478",
+                    "level": "street",
+                    "districts": []
+                },
+                "11": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "大崀镇",
+                    "center": "112.461,24.4101",
+                    "level": "street",
+                    "districts": []
+                },
+                "12": {
+                    "citycode": "0763",
+                    "adcode": "441823",
+                    "name": "秤架瑶族乡",
+                    "center": "112.952,24.7897",
+                    "level": "street",
+                    "districts": []
+                }
+            ]
+        },
+        "6": {
+            "citycode": "0763",
+            "adcode": "441803",
+            "name": "清新区",
+            "center": "113.015203,23.736949",
+            "level": "district",
+            "districts": [
+                "0": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "太平镇",
+                    "center": "112.726,23.7066",
+                    "level": "street",
+                    "districts": []
+                },
+                "1": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "禾云镇",
+                    "center": "112.936,24.0426",
+                    "level": "street",
+                    "districts": []
+                },
+                "2": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "浸潭镇",
+                    "center": "112.785,24.1006",
+                    "level": "street",
+                    "districts": []
+                },
+                "3": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "笔架林场",
+                    "center": "112.97,23.8018",
+                    "level": "street",
+                    "districts": []
+                },
+                "4": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "龙颈镇",
+                    "center": "112.797,23.9391",
+                    "level": "street",
+                    "districts": []
+                },
+                "5": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "太和镇",
+                    "center": "112.913,23.7023",
+                    "level": "street",
+                    "districts": []
+                },
+                "6": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "山塘镇",
+                    "center": "112.925,23.6569",
+                    "level": "street",
+                    "districts": []
+                },
+                "7": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "三坑镇",
+                    "center": "112.774,23.6386",
+                    "level": "street",
+                    "districts": []
+                },
+                "8": {
+                    "citycode": "0763",
+                    "adcode": "441803",
+                    "name": "石潭镇",
+                    "center": "112.721,24.2133",
+                    "level": "street",
+                    "districts": []
+                }
+            ]
+        },
+        "7": {
+            "citycode": "0763",
+            "adcode": "441802",
+            "name": "清城区",
+            "center": "113.048698,23.688976",
+            "level": "district",
+            "districts": [
+                "0": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "清远市国营银盏林场",
+                    "center": "113.172,23.5142",
+                    "level": "street",
+                    "districts": []
+                },
+                "1": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "凤城街道",
+                    "center": "113.067,23.748",
+                    "level": "street",
+                    "districts": []
+                },
+                "2": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "石角镇",
+                    "center": "113.018,23.5386",
+                    "level": "street",
+                    "districts": []
+                },
+                "3": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "清远市高新技术产业开发区",
+                    "center": "113.063,23.6365",
+                    "level": "street",
+                    "districts": []
+                },
+                "4": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "龙塘镇",
+                    "center": "113.042,23.5471",
+                    "level": "street",
+                    "districts": []
+                },
+                "5": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "飞来峡镇",
+                    "center": "113.091,23.8729",
+                    "level": "street",
+                    "districts": []
+                },
+                "6": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "源潭镇",
+                    "center": "113.214,23.7146",
+                    "level": "street",
+                    "districts": []
+                },
+                "7": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "洲心街道",
+                    "center": "113.023,23.6833",
+                    "level": "street",
+                    "districts": []
+                },
+                "8": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "横荷街道",
+                    "center": "113.075,23.6384",
+                    "level": "street",
+                    "districts": []
+                },
+                "9": {
+                    "citycode": "0763",
+                    "adcode": "441802",
+                    "name": "东城街道",
+                    "center": "113.183,23.761",
+                    "level": "street",
+                    "districts": []
+                }
+            ]
+        }
+    ]
+}
