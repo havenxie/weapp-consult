@@ -3,8 +3,6 @@
     "pages/main/main",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/setting/setting",
-    "pages/plan/plan",
     "pages/order/order",
     "pages/my/my",
     "pages/feedback/feedback",

@@ -106,11 +106,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    console.log(app.globalData.hasinfo)
-    console.log(app.globalData.userInfo)
+    // console.log(app.globalData.hasinfo)
+    // console.log(app.globalData.userInfo)
     if( app.globalData.hasinfo && app.globalData.userInfo ) { //后台有数据并且已经授权
       if(app.globalData.hasStorageInfo) { //本地有存储
-         console.log(app.globalData.storageInfo)
+        //  console.log(app.globalData.storageInfo)
       } else {
         if(app.globalData.pageBackstate) {
           app.globalData.pageBackstate = false

@@ -16,7 +16,7 @@
       </label>
     </radio-group>
 
-    <picker class="items birthday"  mode="date" value="{{date}}" start="1970-01-01" end="{{endDate}}" bindchange="bindDateChange">
+    <picker class="items birthday"  mode="date" value="{{date}}" start="1970-01-01" end="2030-01-01" bindchange="bindDateChange">
       {{storageInfo.birthday}}
     </picker>
 

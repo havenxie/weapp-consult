@@ -22,7 +22,8 @@ Page({
     },        
     hasStorageInfo: false,
 
-    endDate: new Date().toLocaleDateString('chinese', {hour12: false}).replace("/", "-").replace("/", "-")
+    // endDate: new Date().toLocaleDateString('chinese', {hour12: false}).replace("/", "-").replace("/", "-")
+    endDate: '2020-05-27'
   },
 
   bindconfirm: function(e) {

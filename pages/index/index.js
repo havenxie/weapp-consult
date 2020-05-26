@@ -7,7 +7,6 @@ const sign = app.globalData.sign
 Page({
   data: {
     userInfo: {},
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
     openid: '',
     order: {},
     hidden: true,
@@ -15,27 +14,7 @@ Page({
     closeApp: false,
      news: {},
   },
-  navToPlan: function(event) {
-    if(this.data.hidden) return //没有加载出数据之前禁止跳转
-    if (app.globalData.balance <= 0.0) {
-      wx.showModal({
-        title: '温馨提示',
-        content: '您的余额不足，为了不影响您的正常订餐，请及时充值',
-        showCancel: false,
-        confirmText: '知道了',
-        confirmColor: '#FF0000'
-      })
-      return
-    }
-    let tapSrc = event.currentTarget.dataset.meal
-    wx.navigateTo({
-      url: '../plan/plan?meal=' + tapSrc,
-      success: (res) => { },
-      fail: (err) => {
-        console.log(err)
-      }
-    })
-  },
+
   navToOrder: function(event) {
     if(this.data.hidden) return //没有加载出数据之前禁止跳转
     let tapData = event.currentTarget.dataset.data
@@ -54,11 +33,7 @@ Page({
   getProfessorList: function () {
     let that = this
     app.request({
-      url: 'https://qx.sj0763.com/2020/wxapp_xlfd/api/professorlist.php',
-      // data: {
-      //   "openid": app.globalData.openID,
-      //   "sign": util.hexMD5(app.globalData.openID + sign)
-      // },
+      url: 'http://qx.sj0763.com/2020/wxapp_xlfd/api/professorlist.php',
       msg: '更新数据',
       hideStstus: false,
       success: function(res) {
@@ -71,26 +46,21 @@ Page({
           that.setData({order: resData, hidden: false})
           typeof success == 'function' && success(resData);
         }
-      },       
-      fail: function(res) {
-        typeof fail == 'function' && fail(resData);
-      },
-      complete: function() {
-      }  
-
-    })
-  },
-  wxLoading: function() {
-    let that = this;
-    wx.login({
-      success: res => {
-
-      },
-      fail: function () {
-          app.showToast('warn', 1500, '登录失败')
       }
+
     })
   },
+  // wxLoading: function() {
+  //   let that = this;
+  //   wx.login({
+  //     success: res => {
+
+  //     },
+  //     fail: function () {
+  //         app.showToast('warn', 1500, '登录失败')
+  //     }
+  //   })
+  // },
   onLoad: function (options) {
     // console.log('onload')
     this.getProfessorList()
@@ -105,11 +75,12 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    if (app.globalData.pageBindSta) {
-      console.log('back form bindPage')
-      app.globalData.pageBindSta = false
-      this.getStatus()
-    } 
+    this.getProfessorList()
+    // if (app.globalData.pageBindSta) {
+    //   console.log('back form bindPage')
+    //   app.globalData.pageBindSta = false
+    //   this.getStatus()
+    // } 
     // if (app.globalData.pageOrderSta) {
     //   console.log('back form orderPage')
     //   app.globalData.pageOrderSta = false

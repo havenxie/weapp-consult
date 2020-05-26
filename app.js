@@ -22,14 +22,14 @@ App({
             "sign": util.hexMD5(that.globalData.salt + that.globalData.code)
           },
           success: function(res) {
-            console.log(res)
+            // console.log(res)
             that.globalData.openid = res.data.openid;
             that.globalData.sessionkey = res.data.session_key;
             that.globalData.hasinfo = res.data.hasinfo;
             that.globalData.hasStorageInfo = wx.getStorageSync('hasStorageInfo')
             that.globalData.storageInfo = wx.getStorageSync('storageInfo')
-            console.log(that.globalData.hasStorageInfo)
-            console.log(that.globalData.storageInfo)
+            // console.log(that.globalData.hasStorageInfo)
+            // console.log(that.globalData.storageInfo)
           }
       })
       }
@@ -112,7 +112,7 @@ App({
         }
       },
       fail: function (res) {
-        // console.log(res)
+        console.log(res)
         if(!hideStstus) {
           wx.hideLoading()
           that.showToast('none', 2000, '数据请求失败')

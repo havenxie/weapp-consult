@@ -5,14 +5,6 @@
   <view class="pages">
 
     <view class='maintxt date' space="nbsp">{{hidden ? '获取数据中(可下拉刷新)...' : ( order.dateStr[0] + '年' + order.dateStr[1] + '月' + order.dateStr[2] + '日 (' + order.dateStr[3] + ')')}}</view>
-    
-    <!-- 订餐入口开始 -->
-    <!-- <view class='showbox enter' bindtap='navToOrder' hidden='{{hidden}}'>
-      <view class='entertxt'>订餐入口</view>
-      <view class='line'></view>
-      <view class='tipstxt'>*仅可预订下周用餐,当前余额￥{{order.balance}}元*</view>
-    </view> -->
-    <!-- 订餐入口结束 -->
 
     <block wx:for="{{order.professor}}" wx:key="order">
       <view class='showbox enter' bindtap='navToOrder' data-data='{{item}}' hidden='{{hidden}}' hover-class="hover">
@@ -28,48 +20,6 @@
         </view>
       </view>
     </block>
-
-    <!-- 文本提示开始 -->
-    <!-- <view class="txtarea" hidden='{{hidden}}'>
-      <view class='txtinfo'>订餐说明：</view>
-      <view class='txtinfo'>1.订餐入口仅可预订下周周一至周五的饭餐，若需预订本周饭餐请使用订餐临时修改入口进行预订；</view>
-      <view class='txtinfo'>2.每周订餐的截止时间为本周周五中午12:00前。</view>
-    </view> -->
-  <!-- 文本提示结束 -->
-
-    <!-- 打招呼开始 -->
-    <!-- <view class='maintxt hello' hidden='{{hidden}}' space="nbsp">{{hidden ? ' ' : ('你好! ' + order.name + ', 这是您今天的用餐计划')}}</view> -->
-    <!-- 打招呼结束 -->
-
-    <!-- <view class='showbox order' hidden='{{hidden}}'>
-      <view class='titletxt'>早餐</view>
-      <view class='{{(order.today.breakfast=="未订餐") ? "todaytxt warn" : "todaytxt"}}'>{{(order.today.breakfast=="未订餐") ? '未订餐' : '已订餐'}}</view>
-      <view class='line'></view>
-      <view class='{{(order.today.breakfast =="未订餐") ? "nexttxt warn" : "nexttxt"}}'>{{'用餐地点：'+ ((order.today.breakfast=="未订餐") ? '无' : order.today.breakfast) }}</view>
-      <view class='titletxt'>午餐</view>
-      <view class='{{order.today.lunch =="未订餐" ? "todaytxt warn" : "todaytxt"}}'>{{(order.today.lunch=='未订餐') ? '未订餐' : '已订餐'}}</view>
-      <view class='line'></view>
-      <view class='{{order.today.lunch =="未订餐" ? "nexttxt warn" : "nexttxt"}}'>{{'用餐地点：'+ ((order.today.lunch=="未订餐") ? '无' : order.today.lunch) }}</view>
-      <view class='titletxt'>晚餐</view>
-      <view class='{{order.today.dinner =="未订餐" ? "todaytxt warn" : "todaytxt"}}'>{{(order.today.dinner=='未订餐') ? '未订餐' : '已订餐'}}</view>
-      <view class='line'></view>
-      <view class='{{order.today.dinner =="未订餐" ? "nexttxt warn" : "nexttxt"}}'>{{'用餐地点：'+ ((order.today.dinner=="未订餐") ? '无' : order.today.dinner) }}</view>
-    </view> -->
-    <!-- 当天信息结束 -->
-
-    <!-- 转到计划开始 -->
-    <!-- <view class='showbox toplan' hidden='{{hidden}}' bindtap='navToPlan' data-meal='0'>订餐临时修改入口</view> -->
-    <!-- 转到计划结束 -->
-
-    <!-- 文本提示开始 -->
-    <!-- <view class="txtarea" hidden='{{hidden}}'>
-      <view class='txtinfo'>临时修改订餐说明：</view>
-      <view class='txtinfo'>1.临时修改订餐入口可用于修改所有的用餐计划或用餐地点。</view>
-      <view class='txtinfo'>2.若需要修改用餐计划或用餐地点，请于当天中午12:00前修改次日的用餐安排。</view>
-    </view> -->
-  <!-- 文本提示结束 -->
-  <!-- --------------------------------------------------------------------------------------- -->
-
 
 
   <!-- --------------------------------------------------------------------------------------- -->
