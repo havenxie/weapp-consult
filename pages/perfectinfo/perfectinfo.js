@@ -22,8 +22,7 @@ Page({
     },        
     hasStorageInfo: false,
 
-    // endDate: new Date().toLocaleDateString('chinese', {hour12: false}).replace("/", "-").replace("/", "-")
-    endDate: '2020-05-27'
+    endDate: ''
   },
 
   bindconfirm: function(e) {
@@ -192,6 +191,13 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    let thisDate = new Date()
+    let year = thisDate.getFullYear()
+    let mon = thisDate.getMonth() + 1
+    let day = thisDate.getDate()
+    this.setData({
+      endDate: year + '-' + ((mon<10) ? ('0' + mon) : mon) + '-' + ((day<10) ? ('0' + day) : day)
+    })
   },
 
   /**
