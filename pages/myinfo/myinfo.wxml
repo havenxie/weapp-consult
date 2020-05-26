@@ -8,27 +8,27 @@
     </view>
     <view class="box">
       <text class="title">姓名</text>
-      <text class="content">{{hasMyInfo ? myInfo.name : ''}}</text>
+      <text class="content">{{storageInfo.name}}</text>
     </view>
     <view class="box">
       <text class="title">年龄</text>
-      <text class="content">{{hasMyInfo ? myInfo.age : ''}}</text>
+      <text class="content">{{ hasStorageInfo ? age : '' }}</text>
     </view>
-    <view class="box">
+    <view class="box"> 
       <text class="title">性别</text>
-      <text class="content">{{hasMyInfo ? myInfo.sex : ''}}</text>
+      <text class="content">{{ hasStorageInfo ? ((storageInfo.sex == 'man') ? '男' : '女') : '' }}</text>
     </view>
     <view class="box">
       <text class="title">手机号</text>
-      <text class="content">{{hasMyInfo ? myInfo.phone : ''}}</text>
+      <text class="content">{{storageInfo.phone}}</text>
     </view>
     <view class="box">
       <text class="title">出生日期</text>
-      <text class="content">{{hasMyInfo ? myInfo.birthday : ''}}</text>
+      <text class="content">{{storageInfo.birthday}}</text>
     </view>
     <view class="box">
       <text class="title">地址</text>
-      <text class="content">{{hasMyInfo ? myInfo.address : ''}}</text>
+      <text class="content">{{storageInfo.addr}}</text>
     </view>
   </view>
   <button class="modifyBtn" catchtap="catchTapModify">修改</button>

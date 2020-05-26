@@ -9,7 +9,9 @@ Page({
   data: {
     userInfo: {},      //userInfo是获取的微信信息
     hasUserInfo: false,
+
     storageInfo: {},        //storageInfo是用户填写的个人信息
+    age: 0,
     hasStorageInfo: false
   },
   catchTapModify: function() {
@@ -22,14 +24,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } 
 
-    
   },
 
   /**
@@ -43,7 +38,26 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
+    if (app.globalData.userInfo) {
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    } 
 
+    let thisHasStorageInfo = wx.getStorageSync('hasStorageInfo')
+    let thisStorageInfo = wx.getStorageSync('storageInfo')
+    console.log(thisHasStorageInfo)
+    console.log(thisStorageInfo)
+    if(thisHasStorageInfo) {
+      let thisYear = new Date().getFullYear()
+      let userYear = thisStorageInfo.birthday.split("-")[0]
+      this.setData({
+        storageInfo: wx.getStorageSync('storageInfo'),
+        age: thisYear - userYear,
+        hasStorageInfo: true
+      })
+    } 
   },
 
   /**

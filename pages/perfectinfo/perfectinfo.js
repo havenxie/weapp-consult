@@ -13,14 +13,16 @@ Page({
     userInfo: {},      //userInfo是获取的微信信息
     hasUserInfo: false,
 
-    storageInfo: {
+    storageInfo: {     //storageInfo是用户填写的个人信息
       name: '',
       sex: 'man',
       birthday: '1990-01-01',
       phone: '',
       addr: '铁木真路'
-    },        //storageInfo是用户填写的个人信息
+    },        
     hasStorageInfo: false,
+
+    endDate: new Date().toLocaleDateString('chinese', {hour12: false}).replace("/", "-").replace("/", "-")
   },
 
   bindconfirm: function(e) {
@@ -189,7 +191,6 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
   },
 
   /**
