@@ -2,7 +2,6 @@
 var util = require('../../utils/md5.js')
 const app = getApp()
 const salt = app.globalData.salt
-const sign = app.globalData.sign
 
 Page({
 
@@ -18,7 +17,7 @@ Page({
       sex: 'man',
       birthday: '1990-01-01',
       phone: '',
-      addr: '铁木真路'
+      addr: ''
     },        
     hasStorageInfo: false,
 
@@ -26,15 +25,18 @@ Page({
   },
 
   bindconfirm: function(e) {
-    console.log(e.detail.value)
+    // console.log(e.detail.value)
     let thisInfo = this.data.storageInfo
     thisInfo.name = e.detail.value
     this.setData({
       storageInfo: thisInfo
     })  
   },
+  bindInputName: function(e) {
+    this.bindconfirm(e)
+  },
   radioChange: function(e) {
-    console.log(e.detail.value)
+    // console.log(e.detail.value)
     let thisInfo = this.data.storageInfo
     thisInfo.sex = e.detail.value
     this.setData({
@@ -42,7 +44,7 @@ Page({
     })
   },
   bindDateChange: function(e) {
-    console.log(e.detail.value)
+    // console.log(e.detail.value)
     let thisInfo = this.data.storageInfo
     thisInfo.birthday = e.detail.value
     this.setData({
@@ -51,7 +53,7 @@ Page({
   },
   getPhoneNumber: function(e) {
     let that = this
-    console.log(e)
+    // console.log(e)
     if(e.detail.errMsg == 'getPhoneNumber:ok') {
       console.log(app.globalData.openid )
       console.log(app.globalData.sessionkey)
@@ -85,12 +87,15 @@ Page({
     }
   },
   bindDetailAddr: function(e) {
-    console.log(e.detail.value)
+    // console.log(e.detail.value)
     let thisInfo = this.data.storageInfo
     thisInfo.addr = e.detail.value
     this.setData({
       storageInfo: thisInfo
     })  
+  },
+  bindInputAddr: function(e) {
+    this.bindDetailAddr(e)
   },
   catchTapSbumit: function(e) {
     let that = this

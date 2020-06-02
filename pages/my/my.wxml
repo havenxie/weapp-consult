@@ -13,7 +13,7 @@
     <text class="user-motto">我的留言</text>
   </view>
 
-  <view class="usermotto" catchtap="">
+  <view class="usermotto" catchtap="catchtapGotoOrderInfo">
     <image class="icon" src= '../../imgs/appointment.png' mode="cover"></image>
     <text class="user-motto">我的预约</text>
   </view>

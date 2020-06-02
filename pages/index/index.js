@@ -2,7 +2,6 @@
 var util = require('../../utils/md5.js') 
 const app = getApp()
 const salt = app.globalData.salt
-const sign = app.globalData.sign
 
 Page({
   data: {

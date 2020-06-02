@@ -21,7 +21,7 @@
 .showbox{
   width: 100%;
   padding: 0rpx;
-  box-shadow: 8rpx 8rpx 10rpx rgb(219, 219, 219);
+  /* box-shadow: 8rpx 8rpx 10rpx rgb(219, 219, 219); */
   border-radius: 10rpx;
   display: flex;
   flex-direction: column;
@@ -121,9 +121,6 @@
 .txtinfo {
   line-height: 40rpx;
 }
-/* .showbox:last-child {
-  margin-bottom: 8%;
-} */
 
 /* 主页界面结束 */
 

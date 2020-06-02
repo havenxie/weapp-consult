@@ -1,0 +1,41 @@
+/* pages/orderInfo/orderInfo.wxss */
+.container {
+  align-items: start;
+  overflow-y: scroll;
+}
+.orderTips {
+  margin-top: 30rpx;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.orderUnit {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 10rpx;
+  padding: 20rpx 30rpx;
+  color: #333;
+  background-color: #fff;
+}
+.orderUnit view {
+  margin: 5rpx 0;
+}
+.orderUnit .oneLine, .orderUnit .twoLine {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  width: 100%;
+}
+.orderUnit .left {
+  width: 50%;
+}
+.orderUnit .right {
+}
+.orderUnit .unitTxt {
+  /* margin-top: 10rpx; */
+}

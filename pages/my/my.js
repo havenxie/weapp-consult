@@ -1,6 +1,8 @@
 //index.js
 //获取应用实例
+var util = require('../../utils/md5.js') 
 const app = getApp()
+const salt = app.globalData.salt
 
 Page({
   data: {
@@ -29,11 +31,6 @@ Page({
      }
     }
   },
-  catchtapGotoLog: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
   catchTapGotoInfo: function() {
     let that = this
     if(that.data.hasStorageInfo) {
@@ -48,6 +45,27 @@ Page({
       })
     }
   },
+  catchtapGotoOrderInfo: function() {
+    let that = this
+    let state = !app.globalData.hasinfo || !app.globalData.userInfo || !app.globalData.hasStorageInfo
+    if (state) {
+      wx.showModal({
+        title: '提示',
+        content: '请登录授权并完善个人信息',
+      })
+      return
+    } 
+    console.log("goto OrderInfo")
+    wx.navigateTo({
+      url: '../appointments/appointments'
+    })
+  },
+  catchtapGotoLog: function() {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+
   catchTapFeedback: function() {
     wx.navigateTo({
       url: '../feedback/feedback',

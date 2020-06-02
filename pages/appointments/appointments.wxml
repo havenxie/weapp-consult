@@ -1,0 +1,19 @@
+<!--pages/orderInfo/orderInfo.wxml-->
+<view class="container">
+  <text class="orderTips" wx:if="{{!appointments}}">'暂无预约信息'</text>
+  <block wx:for="{{appointments}}" wx:key="appointments">
+    <view class='orderUnit' data-data='{{item}}'>
+      <view class="oneLine">
+        <text class="left">{{'预约编号： ' + item.apmid}}</text>
+        <text class="right">{{'预约日期： ' + item.date}}</text>
+      </view>
+      <view class="twoLine">
+        <text class="left">{{'预约专家： ' + item.drname}}</text>
+        <text class="right">{{'预约状态： ' + ((item.status == 0) ? '待确认' : ((item.status == 1) ? '已预约' : '已取消'))}}</text>
+      </view>
+      <view class="unitTxt" wx:if="{{item.info}}">
+        <text class="">{{'提醒信息： ' + item.info}}</text>
+      </view>
+    </view>
+  </block>
+</view>

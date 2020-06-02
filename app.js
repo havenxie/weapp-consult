@@ -81,10 +81,10 @@ App({
     })
   },
 
-  request: function ({ url, data, msg, hideStstus, success, fail, complete }) {
+  request: function ({ url, data, msg, hideStatus, success, fail, complete }) {
     // console.log({ url, data, msg, success, fail })
     // console.log(data)
-    if(!hideStstus) wx.showLoading({ title: msg + '...'})
+    if(!hideStatus) wx.showLoading({ title: msg + '...'})
     let that = this
     wx.request({
       url: url,
@@ -94,12 +94,12 @@ App({
       success: function (res) {
         // console.log(res)
         let resdata = res.data
-        if(!hideStstus) wx.hideLoading()
+        if(!hideStatus) wx.hideLoading()
         if (res.data.code == 200) {
-          if (!hideStstus) that.showToast('success', 1000, msg)
+          if (!hideStatus) that.showToast('success', 1000, msg)
           typeof success == 'function' && success(resdata);
         } else {
-          if (!hideStstus) {
+          if (!hideStatus) {
             wx.showModal({
               title: '提示',
               content: res.data.desc,

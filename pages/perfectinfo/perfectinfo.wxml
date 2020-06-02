@@ -5,7 +5,7 @@
   </view>
   <view class="form">
 
-    <input class="items name" placeholder="姓名" maxlength='10' confirm-type='true' value="{{storageInfo.name}}" bindconfirm="bindconfirm" />
+    <input class="items name" placeholder="姓名" confirm-type='true' value="{{storageInfo.name}}" bindconfirm="bindconfirm" bindinput="bindInputName"/>
 
     <radio-group class="items sexRadio" bindchange="radioChange">
       <label class="radio">
@@ -29,7 +29,7 @@
     <!-- <picker class="area"  mode="date" value="{{}}"  bindchange="bindAreaChange">
       {{storageInfo.birthday}}
     </picker> -->
-    <input class="lastAddress" placeholder="详细地址" maxlength='20' confirm-type='true' value="{{storageInfo.addr}}" bindconfirm="bindDetailAddr" />
+    <input class="lastAddress" placeholder="详细地址" confirm-type='true' value="{{storageInfo.addr}}" bindconfirm="bindDetailAddr" bindinput="bindInputAddr"/>
   </view>
 
   </view>
