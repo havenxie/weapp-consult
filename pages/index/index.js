@@ -32,7 +32,7 @@ Page({
   getProfessorList: function () {
     let that = this
     app.request({
-      url: 'http://qx.sj0763.com/2020/wxapp_xlfd/api/professorlist.php',
+      url: 'https://qx.sj0763.com/2020/wxapp_xlfd/api/professorlist.php',
       msg: '更新数据',
       hideStstus: false,
       success: function(res) {
