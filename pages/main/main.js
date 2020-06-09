@@ -9,12 +9,24 @@ Page({
 
   },
 
-
+  // 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let that = this
+    app.request({
+      url: 'https://qx.sj0763.com/2020/wxapp_xlfd/api/vod.demo.php',
+      msg: '获取数据',
+      hideStstus: false,
+      success: function(res) {
+        console.log(res)
+        let resData = res
+        if(resData.desc == 'ok') {
+        }
+      }
 
+    })
     
   },
 
