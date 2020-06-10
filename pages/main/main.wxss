@@ -1,7 +1,47 @@
 /* pages/main.wxss */
-.pages .test {
-  text-align: center;
-  color: rgba(233, 70, 5, 0.5);
+
+.video {
+	width: 100%;
+	display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
+.video video{
+	width: 100%;
+}
+.info {
+  width: 100%;
+  box-sizing: border-box;
+}
+.head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40rpx;
 
-
+}
+.head .title {
+  font-size: 38rpx;
+  font-weight: 900;
+  width: 84%;
+}
+.head .tips {
+  font-size: 26rpx;
+  color: #333;
+}
+.head .right {
+    width: 50rpx;
+    height: 50rpx;
+    opacity: 0.5;
+}
+.time {
+  margin-left: 50rpx;
+  color: #333;
+  font-size: 26rpx;
+  margin-bottom: 60rpx;
+}

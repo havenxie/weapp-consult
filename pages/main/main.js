@@ -6,9 +6,38 @@ Page({
    * 页面的初始数据
    */
   data: {
+    playlist: [],
+    controls: true,
+    playBtn: false,
+    duration: 1000,
+    cache: false,
+    indexCurrent: null,
+    playFlag: false
+  },
+  videoPlay: function (e) {
+    let that = this
+    var curIdx = e.currentTarget.dataset.index;
+    if(this.data.indexCurrent != curIdx) {
+      for(let i = 0; i < this.data.playlist.length; i++ )
+      {
+        var videoContext = wx.createVideoContext('myVideo' + i) //这里对应的视频id
+        videoContext.pause()
+      }
+      this.setData({
+        indexCurrent: curIdx,
+        playFlag: false
+      })
+      var videoContext = wx.createVideoContext('myVideo' + curIdx) //这里对应的视频id
+      videoContext.play()
+    } else {
+      var videoContext = wx.createVideoContext('myVideo' + curIdx) //这里对应的视频id
+      this.data.playFlag ? videoContext.play() : videoContext.pause()
+      this.setData({
+        playFlag : !that.data.playFlag
+      })
+    }
 
   },
-
   // 
   /**
    * 生命周期函数--监听页面加载
@@ -21,8 +50,10 @@ Page({
       hideStstus: false,
       success: function(res) {
         console.log(res)
-        let resData = res
-        if(resData.desc == 'ok') {
+        if(res.desc == 'ok') {
+          that.setData({
+            playlist: res.playlist
+          })
         }
       }
 

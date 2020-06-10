@@ -1,7 +1,22 @@
 <!--pages/main.wxml-->
-<view class="pages">
-  <text class="test">敬请期待</text>
-
+<view class="container">
+  <!-- <text class="test">敬请期待</text> -->
+  <block wx:for="{{playlist}}" wx:key="video">
+    <view class="video" >
+		  <video id="myVideo{{index}}" src="{{item.media}}" poster="{{item.cover}}" object-fit="cover" title="{{item.title}}" play-btn-position="center" show-mute-btn="true" controls="{{controls}}" autoplay='{{false}}' data-index='{{index}}' bindtap="videoPlay"></video>
+      <view class="info">
+        <view class="head">
+          <text class="title">{{item.title}}</text>
+          <text class="tips">简介</text>
+          <image class="right" src="../../imgs/more.png" mode="cover"></image>
+        </view>
+        <view class="time">
+          <text>{{item.str_end}}</text>
+        </view>
+      </view>
+	  </view>
+  </block>
+	
 
 </view>
 
