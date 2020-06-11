@@ -8,7 +8,7 @@
         <text class="right">{{'预约日期： ' + item.date}}</text>
       </view>
       <view class="twoLine">
-        <text class="left">{{'预约专家： ' + item.drname}}</text>
+        <text class="left">{{'导师名称： ' + item.drname}}</text>
         <text class="right">{{'预约状态： ' + ((item.status == 0) ? '待确认' : ((item.status == 1) ? '已预约' : '已取消'))}}</text>
       </view>
       <view class="unitTxt" wx:if="{{item.info}}">

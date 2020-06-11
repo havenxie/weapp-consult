@@ -6,15 +6,15 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
-		"enhance": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": false,
 		"newFeature": true,
-		"coverView": true,
 		"autoAudits": false,
+		"coverView": true,
 		"showShadowRootInWxmlPanel": false,
 		"scopeDataCheck": false,
+		"enhance": true,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -23,7 +23,7 @@
 			"disablePlugins": [],
 			"outputPath": ""
 		},
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false
 	},
 	"compileType": "miniprogram",

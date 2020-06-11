@@ -14,8 +14,8 @@
   width: 100%;
 }
 .doctorInfo .doctorImg {
-  width: 75%;
-  height: 360rpx;
+  width: 70%;
+  height: 320rpx;
   display: block;
   margin-right: 16rpx;
   border-radius: 12rpx;

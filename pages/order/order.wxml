@@ -30,19 +30,19 @@
 
   <!-- 向专家留言按钮开始 -->
   <view class="customBtn" hidden="{{!showMark.pushMsg}}" data-mark="pushMsg" catchtap="catchTapPushMsg">
-    <text class="orderTips">向专家在线留言</text>
+    <text class="orderTips">在线留言</text>
   </view>
   <!-- 向专家留言按钮结束 -->
 
   <!-- 查询我的留言按钮开始 -->
   <view class="customBtn" hidden="{{!showMark.pullMsg}}" data-mark="pullMsg" catchtap="catchTapPullMsg">
-    <text class="orderTips">查询我的留言</text>
+    <text class="orderTips">我的留言</text>
   </view>
   <!-- 查询我的留言按钮结束 -->
 
   <!-- 预约日期列表部分开始 -->
   <view class="customBtn {{(!dropBox)?'':'showColor'}}" hidden="{{!showMark.lists}}" data-mark="lists"  >
-    <picker class='' bindchange='bindSetOrder' value="{{index}}" range="{{thisDoctorInfo.scheduleLong}}" >查看并选择预约日期</picker>
+    <picker class='' bindchange='bindSetOrder' value="{{index}}" range="{{thisDoctorInfo.scheduleLong}}" >选择预约</picker>
   </view>
   
   <!-- <view class="customBtn {{(!dropBox)?'':'showColor'}}" hidden="{{!showMark.lists}}" data-mark="lists"  >
