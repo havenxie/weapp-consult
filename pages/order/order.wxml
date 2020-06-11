@@ -36,13 +36,13 @@
 
   <!-- 查询我的留言按钮开始 -->
   <view class="customBtn" hidden="{{!showMark.pullMsg}}" data-mark="pullMsg" catchtap="catchTapPullMsg">
-    <text class="orderTips">我的留言</text>
+    <text class="orderTips">查看留言</text>
   </view>
   <!-- 查询我的留言按钮结束 -->
 
   <!-- 预约日期列表部分开始 -->
   <view class="customBtn {{(!dropBox)?'':'showColor'}}" hidden="{{!showMark.lists}}" data-mark="lists"  >
-    <picker class='' bindchange='bindSetOrder' value="{{index}}" range="{{thisDoctorInfo.scheduleLong}}" >选择预约</picker>
+    <picker class='' bindchange='bindSetOrder' value="{{index}}" range="{{thisDoctorInfo.scheduleLong}}" >预定选择</picker>
   </view>
   
   <!-- <view class="customBtn {{(!dropBox)?'':'showColor'}}" hidden="{{!showMark.lists}}" data-mark="lists"  >
